@@ -1,16 +1,10 @@
-import  ReactDOM  from 'react-dom'
-import React from 'react'
-import Quiz from './Quiz'
+import ReactDOM from "react-dom";
+import App from "./App";
+import { SessionProvider } from "@inrupt/solid-ui-react";
 
-function App() {
-  return (
-    <div>
-        <Quiz/>
-    </div>
-  )
-}
-
-export default App;
-
-const rootElement = document.getElementById('root')
-ReactDOM.render(<App></App>, rootElement)
+ReactDOM.render(
+  <SessionProvider>
+    <App />
+  </SessionProvider>,
+  document.getElementById("root")
+);
